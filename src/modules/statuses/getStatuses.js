@@ -10,9 +10,9 @@ export default function getStatuses(req, res) {
     })
     .catch(err => {
       console.log(err);
-      res.status(400).json("Statuses get all error")
+      res.status(400).json("Statuses get all error");
     })
     .finally(() => {
       console.log("Statuses get all END");
-    })
+    });
 }
