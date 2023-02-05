@@ -7,7 +7,7 @@ import routes from './modules/core/routes';
 import dbConnect from './modules/core/db';
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = 7198;
 
 dbConnect();
 logger(app);
