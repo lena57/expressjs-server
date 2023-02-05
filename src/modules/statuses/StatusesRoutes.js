@@ -8,8 +8,8 @@ const statusesRouter = Router();
 
 statusesRouter.post('/', postStatuses);
 statusesRouter.get('/', getStatuses);
-statusesRouter.patch('/', patchStatuses);
-statusesRouter.delete('/', deleteStatuses);
+statusesRouter.patch('/:statusId', patchStatuses);
+statusesRouter.delete('/:statusId', deleteStatuses);
 
 
 export default statusesRouter;

@@ -6,11 +6,11 @@ import clientsRouter from '../clients/ClientsRouter';
 import ordersRouter from '../orders/OrdersRouter';
 
 export default function routes(app){
-  app.use('/tasks', tasksRouter)
-  app.use('/statuses', statusesRouter)
-  app.use('/services', servicesRouter)
-  app.use('/clients', clientsRouter)
-  app.use('/orders', ordersRouter)
-  app.use('/', home)
+  app.use('https://expressjs-server-production.up.railway.app/tasks', tasksRouter);
+  app.use('https://expressjs-server-production.up.railway.app/statuses', statusesRouter);
+  app.use('/services', servicesRouter);
+  app.use('/clients', clientsRouter);
+  app.use('/orders', ordersRouter);
+  app.use('https://expressjs-server-production.up.railway.app', home);
 }
 

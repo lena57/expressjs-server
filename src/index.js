@@ -9,12 +9,12 @@ import dbConnect from './modules/core/db';
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-dbConnect()
-logger(app)
-parseResponse(app)
-cors(app)
-routes(app)
-errorHandler(app)
+dbConnect();
+logger(app);
+parseResponse(app);
+cors(app);
+routes(app);
+errorHandler(app);
 
 app.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}`);
