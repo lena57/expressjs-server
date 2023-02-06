@@ -11,6 +11,6 @@ export default function routes(app){
   app.use('/services', servicesRouter);
   app.use('/clients', clientsRouter);
   app.use('/orders', ordersRouter);
-  app.use('/', home);
+  app.use('https://expressjs-server-production.up.railway.app', home);
 }
 

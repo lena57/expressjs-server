@@ -1,5 +1,14 @@
-export default function patchStatuses(req, res) {
+import Status from './Model';
 
-  const answer = {status: 'Status updated!',}
-  res.status(201).json(answer);
+export default function patchStatuses(req, res) {
+  const statusId = req.params.statusId;
+  Status.findByIdAndUpdate(statusId, req.body)
+    .exec()
+    .then((result) => {
+      res.status(200).json(result);
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(400).json('User update error');
+    });
 }
